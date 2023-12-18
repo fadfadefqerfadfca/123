@@ -1,0 +1,278 @@
+@keyframes bikeAnimation {
+    0% {
+      left: -300px;  /* начальное положение за пределами экрана слева */
+    }
+    100% {
+      left: calc(90% - 400px); /* остановка в центре экрана минус половина ширины велосипеда */
+    }
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* делаем фон на весь экран */
+    background: url(https://x74.imgup.net/roade041.png);
+    background-repeat: repeat-x;
+    animation: travel 5s infinite 0s;
+    animation-timing-function: linear;
+    overflow: hidden;
+    background-image: linear-gradient(to top,#375c2c 40%,#e4ffff 20%);
+  }
+  
+  .container {
+    position: absolute;
+    animation: bikeAnimation 5s forwards;
+    animation-timing-function: linear;
+  }
+
+
+
+.main{
+	width:350px;
+	height:100px;
+	background:rgb(96, 96, 133);
+	border-top-left-radius:50px;
+	border-top-right-radius:50px;
+}
+
+.hood{
+	width:430px;
+	height:90px;
+	background:rgb(96, 96, 133);
+	float:right;
+	margin-right:-80px;
+	border-top-right-radius:40px;
+	border-bottom:10px solid #764499;
+}
+
+.trunk{
+	width:70px;
+	height:90px;
+	background:rgb(96, 96, 133);
+	margin-left:-71px;
+	border-top-left-radius:30px;
+	border-bottom:10px solid #764499;
+	border-right:1px solid rgb(96, 96, 133);
+}
+
+.tire{
+	width:50px;
+	height:50px;
+	background:#434343;
+	border-radius:50%;
+	border:20px solid #000000;
+	border-top:22px solid #000000;
+	position:relative;
+	animation:rotate 2s infinite 0s;
+	animation-timing-function:linear;
+}
+
+@keyframes rotate{
+	0%{transform:rotate(-865deg);};
+	100%{transform:rotate(0deg);};
+}
+
+.front{
+	margin-top:40px;
+}
+
+.back{
+    position:absolute;
+	margin-top:40px;
+  	margin-left:250px;
+}
+
+.tire:after{
+	content:"֍";
+	position:absolute;
+	top:15px;
+	left:20px;
+	right:0;
+	bottom:0;
+}
+
+.door{
+	position:absolute;
+	height:150px;
+	width:100px;
+	top:25px;
+}
+.driver{
+    border-left:2px solid black;
+	left:200px;
+}
+
+.seater{
+    border-left:2px solid black;
+	left:50px;
+}
+
+.door:before{
+	content:"";
+	width:8px;
+	height:8px;
+	background:#123322;
+	position:absolute;
+	border-radius:50%;
+	top:100px;
+	left:-6px;
+}
+.door:after{
+	position:absolute;
+	content:"";
+	width:30px;
+	height:10px;
+	background:#454545;	
+	border-radius:5px 5px 0 0 ;
+	top:100px;
+	left:20px;
+}
+
+.window{
+	width:120px;
+	height:80px;
+	background:rgb(109, 207, 207);
+	opacity:0.3;
+	margin-top:0px;
+}
+
+
+
+.first:before{
+	content:"";
+	background:black;
+	position:absolute;
+	width:10px;
+	height:35px;
+	top:38%;
+	left:92%;
+	transform:rotate(45deg);
+	border-radius:5px;
+}
+
+.hood:after{
+	content:"";
+	position:absolute;
+	background:#eea;
+	width:15px;
+	height:20px;
+	left:415px;
+	top:135px;
+	border-top-left-radius:10px;
+	animation:lightglow 0.4s infinite;
+}
+
+@keyframes lightglow{
+	0%{background:rgb(96, 96, 133);};
+	100%{background:#ff0;};
+}
+
+.hood:before{
+	content:"";
+	position:absolute;
+	width:55px;
+	height:20px;
+	left:425px;
+	top:135px;
+	opacity:0.2;
+	border-top:20px solid rgb(255, 255, 62);
+	border-right:50px solid transparent;
+	border-bottom:0px
+}
+
+.trunk:after{
+	content:"";
+	position:absolute;
+	background:red;
+	width:18px;
+	height:20px;
+	left:-71px;
+	top:135px;
+	border-top-right-radius:10px;
+}
+.trunk:before{
+	content:"";
+	position:absolute;
+	background:#deff3a;
+	width:18px;
+	height:10px;
+	left:-71px;
+	top:160px;
+	border-top-right-radius:5px;
+}
+#circle
+{
+   background-color: #fff700; 
+
+ 
+	
+	position: absolute;
+	left: 100px;
+	top:100px;
+	width:120px;
+	height:120px;
+	border-radius:120px;
+	border: 1px solid #aaa;
+}
+
+.cloud{
+    position: absolute;
+    top: var(--top);
+    left: 0;
+    width: 20vmin;
+    height: 10vmin;
+    border-radius: 10vmin 10vmin 0 6vmin;
+    background-color: #b5edf9;
+    -webkit-animation: cloud 10s var(--delay) linear infinite backwards;
+            animation: cloud 10s var(--delay) linear infinite backwards;
+}
+
+.cloud::after {
+    content: "";
+    position: absolute;
+    width: 20vmin;
+    height: 12vmin;
+    bottom: 0;
+    border-radius: 6rem 10rem 1rem 0;
+    -webkit-transform: translateX(9vmin);
+            transform: translateX(9vmin);
+    background-color: #b5edf9;
+  }
+  
+  .cloud::before {
+    content: "";
+    position: absolute;
+    width: 15vmin;
+    height: 8vmin;
+    bottom: 8vmin;
+    border-radius: 20vmin 20vmin 0 0;
+    -webkit-transform: translateX(6vmin);
+            transform: translateX(6vmin);
+    background-color: #b5edf9;
+  }
+   
+
+
+@keyframes cloud {
+    0%{
+        transform: translateX(100vw);
+    }
+
+    100%{
+        transform: translateX(-100vw);
+    }
+}
+
+
+@keyframes run {
+
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
